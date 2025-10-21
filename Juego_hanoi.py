@@ -1,6 +1,3 @@
-"""
-TORRES DE HANOI - VERSIÓN SUPER CORTA
-"""
 class Hanoi:
     def __init__(self, n=3):
         self.t, self.m = {'A': list(range(n,0,-1)), 'B': [], 'C': []}, 0
@@ -15,8 +12,7 @@ class Hanoi:
             print(f"Paso {self.m}: Mover disco {disco} de {o} a {d}")
             print(f"Estado: A={self.t['A']}, B={self.t['B']}, C={self.t['C']}")
             self.resolver(n-1, a, d, o)
-
-# Ejecución inmediata
+            
 if __name__ == "__main__":
     h = Hanoi(3)
     h.resolver(3, 'A', 'C', 'B')
